@@ -20,16 +20,12 @@ except:
 c = requests.Session()
 
 
-banner = """\033[0;35m       __       _       __
-      / /__    (_)___ _/ /______ _
- __  / / _ \  / / __ `/ //_/ __ `/
-/ /_/ /  __/ / / /_/ / ,< / /_/ /
-\____/\___/_/ /\__,_/_/|_|\__,_/
-         /___/
+banner = """\033[0;35m   
+
 \033[0;34m=========================================================
-\033[1;32mAuthor By  \033[1;31m :\033[1;0m Kadal15
-\033[1;32mChannel Yt\033[1;31m  : \033[1;0mJejaka Tutorial
-\033[1;32mSupported By \033[1;31m:\033[1;0m ALFRED❤️"""
+\033[1;32mYapımcı  \033[1;31m :\033[1;0m zeus0901
+\033[1;32mKanal Yt\033[1;31m  : \033[1;0m@olympuskanal
+\033[1;32mŞikayet By \033[1;31m:\033[1;0m ALFRED❤️"""
 
 if not os.path.exists("session"):
     os.makedirs("session")
@@ -38,42 +34,6 @@ print(banner)
 if len(sys.argv) < 2:
     print("\n\n\n\033[1;32mUsage : python main.py +62")
     sys.exit(1)
-
-
-def password():
-    c = requests.Session()
-
-    if not os.path.exists(".password"):
-        os.makedirs(".password")
-
-    print(
-        "\033[1;32mSilahkan Ambil Password Pada Link Di Bawah Ini\033[1;0m\nhttp://jejakainc.com/Password/"
-    )
-    pw = c.get("http://jejakainc.com/Password/Passw.txt")
-    if not os.path.exists(".password/password.txt"):
-        f = open(".password/password.txt", "w+")
-        f.write("wkwkwkwkw")
-        f.close()
-
-    for i in range(99):
-        f = open(".password/password.txt", "r")
-        if f.readlines()[0] == pw.text:
-            sys.stdout.write("\r                                                \r")
-            sys.stdout.write("\r\033[1;32mUsing Exiting Password....!")
-            break
-        pwin = input("\033[1;32mEnter Password \033[1;30m:\033[1;0m ")
-        if pwin == pw.text:
-            f = open(".password/password.txt", "w+")
-            f.write(pwin)
-            f.close()
-            break
-        else:
-            print("\033[1;31mPassword Salah...!")
-            if i > 1:
-                print(
-                    "\033[1;33mSilahkan Check Password Pada Link Di Bawah Ini\n\033[1;0mhttp://jejakainc.com/Password/"
-                )
-                sys.exit()
 
 
 def tunggu(x):
